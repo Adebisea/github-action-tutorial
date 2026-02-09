@@ -5,8 +5,9 @@ jobs:
 
   job1:
     name: cat peace.yaml
+    runs-on: ubuntu-24.04
     steps:
-      run: cat peace.yaml
+    run: cat peace.yaml
 
 
   job2:
