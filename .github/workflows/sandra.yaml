@@ -1,0 +1,15 @@
+name: devops engineer sandra odogwu pipeline
+
+on: [push]
+jobs:
+
+  job1:
+    name: cat peace.yaml
+    steps:
+      run: cat peace.yaml
+
+
+  job2:
+    name: sandra to cook jollof rice
+
+
