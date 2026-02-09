@@ -7,7 +7,11 @@ jobs:
     name: cat peace.yaml
     runs-on: ubuntu-24.04
     steps:
-    run: cat peace.yaml
+      - name: Print the content of peace.yaml
+        run: cat peace.yaml
+
+      # - name: Print the content
+      #   run: cat peace.yaml
 
 
   job2:
