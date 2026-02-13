@@ -1,10 +1,16 @@
-/* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'python:3.14.3-alpine3.23' } }
+    agent any
+
     stages {
-        stage('build') {
-            steps {
-                sh 'python --version'
+        stage('Example') {
+            steps
+
+                {
+    checkout scmGit(branches: [[name: 'main']], extensions: [sparseCheckout([[path: 'peace.yaml']]), cleanBeforeCheckout(deleteUntrackedNestedRepositories: true)], userRemoteConfigs: [[url: 'https://github.com/Adebisea/github-action-tutorial']]) 
+    }
+    
+    {
+              sh "ls -la"
             }
         }
     }
